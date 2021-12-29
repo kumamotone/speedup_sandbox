@@ -35,8 +35,8 @@ jobs:
       with:
         flutter-version: '2.8.0'
     - run: flutter pub get
-    # - run: flutter build apk --debug --target lib/main.dart --no-sound-null-safety
-    - run: cd android && ./gradlew assembleDebug --profile # output to build/app/outputs/flutter-apk/app-debug.apk
+    - run: flutter build apk --debug --target lib/main.dart --no-sound-null-safety
+    # - run: cd android && ./gradlew assembleDebug --profile # output to build/app/outputs/flutter-apk/app-debug.apk
   test:
     runs-on: macOS-11
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
