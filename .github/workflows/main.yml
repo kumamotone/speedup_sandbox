@@ -17,9 +17,9 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
-    - uses: subosito/flutter-action@v1
+    - uses: subosito/flutter-action@v1.5.3
       with:
-        flutter-version: '2.5.3'
+        flutter-version: '2.8.0'
     - run: flutter pub get
     - name: Run iOS
       run: flutter build ios --debug --no-codesign --target lib/main.dart --no-sound-null-safety
@@ -31,9 +31,9 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
-    - uses: subosito/flutter-action@v1
+    - uses: subosito/flutter-action@v1.5.3
       with:
-        flutter-version: '2.5.3'
+        flutter-version: '2.8.0'
     - run: flutter pub get
     - run: flutter build apk --debug --target lib/main.dart --no-sound-null-safety
   test:
@@ -44,8 +44,8 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
-    - uses: subosito/flutter-action@v1
+    - uses: subosito/flutter-action@v1.5.3
       with:
-        flutter-version: '2.5.3'
+        flutter-version: '2.8.0'
     - run: flutter pub get
     - run: flutter test 
