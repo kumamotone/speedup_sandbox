@@ -4,9 +4,9 @@ name: CI
 # events but only for the main branch
 on:
   push:
-    branches: [ main, feature/* ]
+    branches: [ master, feature/* ]
   pull_request:
-    branches: [ main, feature/* ]
+    branches: [ master, feature/* ]
 
 jobs:
   build-ios-debug:
