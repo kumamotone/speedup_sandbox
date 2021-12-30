@@ -16,9 +16,9 @@ class MyApp extends HookConsumerWidget {
                   )
                   .toList(),
             )
-          : const Text('List is empty.'),
+          : const Text('empty'),
       loading: () => const CircularProgressIndicator(),
-      error: (error, _) => Text("error"),
+      error: (error, _) => const Text("error"),
     );
   }
 

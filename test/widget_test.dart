@@ -7,23 +7,78 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:speedup_sandbox/application/providers/currency_provider.dart';
+import 'package:speedup_sandbox/domain/entities/currency_entity.dart';
 import 'package:speedup_sandbox/presentation/myapp.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Testing loading view.', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          currencyProvider.overrideWithValue(
+            const AsyncValue.loading(),
+          ),
+        ],
+        child: const MaterialApp(home: MyApp()),
+      ),
+    );
+    // The first frame is a loading state.
+    expect(find.byType(CircularProgressIndicator), findsOneWidget);
+  });
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  testWidgets('Testing empty list view.', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          currencyProvider.overrideWithValue(
+            const AsyncValue.data([]),
+          ),
+        ],
+        child: const MaterialApp(home: MyApp()),
+      ),
+    );
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    expect(find.byType(CircularProgressIndicator), findsNothing);
+    expect(find.text('empty'), findsOneWidget);
+  });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  testWidgets('Testing list view.', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          currencyProvider.overrideWithValue(
+            AsyncValue.data(
+              [CurrencyEntity(id: "1", name: "name", minSize: "0")],
+            ),
+          ),
+        ],
+        child: const MaterialApp(home: MyApp()),
+      ),
+    );
+
+    expect(find.byType(CircularProgressIndicator), findsNothing);
+    expect(find.text('name'), findsOneWidget);
+  });
+
+  testWidgets('Testing error view.', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          currencyProvider.overrideWithValue(
+            AsyncValue.error(Exception('error content')),
+          ),
+        ],
+        child: const MaterialApp(home: MyApp()),
+      ),
+    );
+
+    expect(find.byType(CircularProgressIndicator), findsNothing);
+    expect(find.text('error'), findsOneWidget);
   });
 }
