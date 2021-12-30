@@ -5,7 +5,7 @@ import 'presentation/myapp.dart';
 
 void main() {
   runApp(
-    ProviderScope(
+    const ProviderScope(
       child: MyApp(),
     ),
   );
