@@ -24,7 +24,7 @@ class MyApp extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final currencies = ref.watch(currencyProvider);
+    final currencies = ref.watch(currencyFutureProvider);
 
     return MaterialApp(
       home: Scaffold(
