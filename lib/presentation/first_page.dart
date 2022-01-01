@@ -11,7 +11,7 @@ class FirstPage extends HookConsumerWidget {
     return asyncValue.when(
       data: (currencies) => currencies.isNotEmpty
           ? ListView.separated(
-              padding: const EdgeInsets.symmetric(vertical: 8),
+              padding: const EdgeInsets.symmetric(vertical: 16),
               itemBuilder: (_, index) {
                 return Text(currencies[index].name);
               },
@@ -29,16 +29,23 @@ class FirstPage extends HookConsumerWidget {
     final currencies = ref.watch(currencyFutureProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Example')),
-      body: Column(
-        children: [
-          TextButton(
-            onPressed: () => GoRouter.of(context).push('/second_page'),
-            child: const Text("Second Page"),
-          ),
-          const Text("bbb"),
-          Flexible(child: _buildList(currencies)),
-        ],
+      appBar: AppBar(
+        title: const Text('Example'),
+        elevation: 0,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          children: [
+            TextButton(
+              onPressed: () => GoRouter.of(context).push('/second_page'),
+              child: const Text("Second Page"),
+            ),
+            const SizedBox(height: 16),
+            const Text("bbb"),
+            Flexible(child: _buildList(currencies)),
+          ],
+        ),
       ),
     );
   }
