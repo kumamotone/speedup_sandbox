@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:speedup_sandbox/application/providers/currency_provider.dart';
 import 'package:speedup_sandbox/domain/entities/currency_entity.dart';
-import 'package:speedup_sandbox/presentation/myapp.dart';
+import 'package:speedup_sandbox/presentation/first_page.dart';
 
 void main() {
   testWidgets('Testing loading view.', (WidgetTester tester) async {
@@ -15,7 +15,7 @@ void main() {
             const AsyncValue.loading(),
           ),
         ],
-        child: const MaterialApp(home: MyApp()),
+        child: const MaterialApp(home: FirstPage()),
       ),
     );
     // The first frame is a loading state.
@@ -31,7 +31,7 @@ void main() {
             const AsyncValue.data([]),
           ),
         ],
-        child: const MaterialApp(home: MyApp()),
+        child: const MaterialApp(home: FirstPage()),
       ),
     );
 
@@ -50,7 +50,7 @@ void main() {
             ),
           ),
         ],
-        child: const MaterialApp(home: MyApp()),
+        child: const MaterialApp(home: FirstPage()),
       ),
     );
 
@@ -67,7 +67,7 @@ void main() {
             AsyncValue.error(Exception('error content')),
           ),
         ],
-        child: const MaterialApp(home: MyApp()),
+        child: const MaterialApp(home: FirstPage()),
       ),
     );
 

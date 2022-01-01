@@ -10,6 +10,7 @@ dependencies:
   flutter_hooks: ^0.18.2
   hooks_riverpod: ^1.0.3
   http: ^0.13.4
+  go_router: ^2.5.7
 
 dev_dependencies:
   flutter_test:
