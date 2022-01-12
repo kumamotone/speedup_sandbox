@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:speedup_sandbox/application/providers/currency_provider.dart';
 import 'package:speedup_sandbox/domain/entities/currency_entity.dart';
-import 'package:speedup_sandbox/presentation/first_page.dart';
+import 'package:speedup_sandbox/presentation/home.dart';
 
 void main() {
   testWidgets('Testing loading view.', (WidgetTester tester) async {

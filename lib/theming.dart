@@ -9,3 +9,5 @@ final themeData = ThemeData(
     },
   ),
 );
+
+const boldTextStyle = TextStyle(fontWeight: FontWeight.bold);

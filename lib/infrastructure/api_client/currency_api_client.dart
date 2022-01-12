@@ -1,11 +1,10 @@
-import 'package:http/http.dart' as http;
+import '../dio.dart';
 
 class CurrencyAPIClient {
-  Future<String> fetch() async {
-    final response =
-        await http.get(Uri.parse('https://api.coinbase.com/v2/currencies'));
+  Future fetch() async {
+    final response = await dio.get('https://api.coinbase.com/v2/currencies');
     if (response.statusCode == 200) {
-      return response.body;
+      return response.data;
     } else {
       throw Exception('Failed to load');
     }
