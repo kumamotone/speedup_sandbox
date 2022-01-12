@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:speedup_sandbox/routing.dart';
+import 'package:speedup_sandbox/theming.dart';
 
 void main() {
   runApp(
@@ -16,15 +17,7 @@ class EntryPoint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: ThemeData(
-        primarySwatch: Colors.amber,
-        pageTransitionsTheme: const PageTransitionsTheme(
-          builders: <TargetPlatform, PageTransitionsBuilder>{
-            TargetPlatform.android: CupertinoPageTransitionsBuilder(),
-            TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
-          },
-        ),
-      ),
+      theme: themeData,
       routeInformationParser: router.routeInformationParser,
       routerDelegate: router.routerDelegate,
     );
