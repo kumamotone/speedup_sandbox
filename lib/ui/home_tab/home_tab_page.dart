@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:speedup_sandbox/presentation/settings.dart';
+import 'package:speedup_sandbox/ui/home_tab/settings_tab_page.dart';
 
-import 'home.dart';
+import 'currency_list_tab_page.dart';
 
-class TabPage extends HookConsumerWidget {
-  const TabPage({Key? key}) : super(key: key);
+class HomeTabPage extends HookConsumerWidget {
+  const HomeTabPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -27,7 +27,7 @@ class TabPage extends HookConsumerWidget {
             return CupertinoTabView(
               builder: (context) {
                 return const CupertinoPageScaffold(
-                  child: FirstPage(),
+                  child: CurrencyListTabPage(),
                 );
               },
             );
@@ -35,7 +35,7 @@ class TabPage extends HookConsumerWidget {
             return CupertinoTabView(
               builder: (context) {
                 return const CupertinoPageScaffold(
-                  child: SettingsPage(),
+                  child: SettingsTabPage(),
                 );
               },
             );

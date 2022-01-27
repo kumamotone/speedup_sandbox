@@ -17,7 +17,7 @@ class EntryPoint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: themeData,
+      theme: theme,
       routeInformationParser: router.routeInformationParser,
       routerDelegate: router.routerDelegate,
     );

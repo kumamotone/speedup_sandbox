@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-final themeData = ThemeData(
+final theme = ThemeData(
   primarySwatch: Colors.amber,
   pageTransitionsTheme: const PageTransitionsTheme(
     builders: <TargetPlatform, PageTransitionsBuilder>{
