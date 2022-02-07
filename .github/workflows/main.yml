@@ -25,7 +25,7 @@ jobs:
     - name: Import Provisioning Profile
       run: |
         mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-        echo -n ${{ secrets.PROVISIONING_PROFILE }} | base64 -d > ~/Library/MobileDevice/Provisioning\ Profiles/distribution.mobileprovision
+        echo -n ${{ secrets.PROVISIONING_PROFILE }} | base64 -d > ~/Library/MobileDevice/Provisioning\ Profiles/speedupadhoc0208.mobileprovision
     - name: Import Code-Signing Certificates
       uses: Apple-Actions/import-codesign-certs@v1
       with:
