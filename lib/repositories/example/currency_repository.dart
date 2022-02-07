@@ -1,5 +1,5 @@
 import 'package:speedup_sandbox/common/dio.dart';
-import 'package:speedup_sandbox/entities/currency_entity.dart';
+import 'package:speedup_sandbox/entities/example/currency_entity.dart';
 
 class CurrencyRepository {
   static Future<List<CurrencyEntity>> fetch() async {

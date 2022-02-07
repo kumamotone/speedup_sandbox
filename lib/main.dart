@@ -6,13 +6,13 @@ import 'package:speedup_sandbox/theming.dart';
 void main() {
   runApp(
     const ProviderScope(
-      child: EntryPoint(),
+      child: Main(),
     ),
   );
 }
 
-class EntryPoint extends StatelessWidget {
-  const EntryPoint({Key? key}) : super(key: key);
+class Main extends StatelessWidget {
+  const Main({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

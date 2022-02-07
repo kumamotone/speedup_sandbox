@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '/entities/currency_entity.dart';
-import '/repositories/currency_repository.dart';
 import '/theming.dart';
+import '../../entities/example/currency_entity.dart';
+import '../../repositories/example/currency_repository.dart';
 
 class CurrencyListTabPage extends HookConsumerWidget {
   const CurrencyListTabPage({Key? key}) : super(key: key);

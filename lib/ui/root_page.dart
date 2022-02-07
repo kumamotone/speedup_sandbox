@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class EmptyPage extends StatelessWidget {
-  const EmptyPage({Key? key}) : super(key: key);
+class RootPage extends StatelessWidget {
+  const RootPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Empty Page'),
+        title: const Text('App Name'),
         elevation: 0,
       ),
       body: const Center(
-        child: Text("Empty Page"),
+        child: Text("Empty"),
       ),
     );
   }

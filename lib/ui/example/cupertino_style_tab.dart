@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:speedup_sandbox/ui/home_tab/settings_tab_page.dart';
+import 'package:speedup_sandbox/ui/example/settings.dart';
 
-import 'currency_list_tab_page.dart';
+import 'fetch_from_api.dart';
 
-class HomeTabPage extends HookConsumerWidget {
-  const HomeTabPage({Key? key}) : super(key: key);
+class RootPage extends HookConsumerWidget {
+  const RootPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
