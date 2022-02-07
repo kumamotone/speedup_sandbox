@@ -5,8 +5,8 @@ import 'package:speedup_sandbox/ui/example/settings.dart';
 
 import 'fetch_from_api.dart';
 
-class RootPage extends HookConsumerWidget {
-  const RootPage({Key? key}) : super(key: key);
+class CupertinoStyleTabPage extends HookConsumerWidget {
+  const CupertinoStyleTabPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

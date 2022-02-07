@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:speedup_sandbox/ui/example/cupertino_style_tab.dart';
+import 'package:speedup_sandbox/ui/root_page.dart';
 
 final router = GoRouter(
   routes: [
