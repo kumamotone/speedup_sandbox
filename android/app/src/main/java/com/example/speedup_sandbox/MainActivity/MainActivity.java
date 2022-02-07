@@ -1,4 +1,4 @@
-package dev.kuma.speedup-sandbox;
+package dev.kuma.speedup_sandbox;
 
 import io.flutter.embedding.android.FlutterActivity;
 
