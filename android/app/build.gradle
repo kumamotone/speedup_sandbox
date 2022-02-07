@@ -34,7 +34,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.speedup_sandbox"
+        applicationId "dev.kuma.speedup-sandbox"
         minSdkVersion 23
         targetSdkVersion 31
         versionCode flutterVersionCode.toInteger()

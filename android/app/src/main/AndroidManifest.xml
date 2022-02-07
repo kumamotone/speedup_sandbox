@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.speedup_sandbox">
+    package="dev.kuma.speedup-sandbox">
    <application
         android:label="speedup_sandbox"
         android:name="${applicationName}"
