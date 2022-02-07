@@ -7,7 +7,7 @@ on:
     branches:
       - master
 
-  testing:
+  jobs:
     runs-on: ubuntu-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
