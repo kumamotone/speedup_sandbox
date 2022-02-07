@@ -21,7 +21,7 @@ jobs:
         cache: 'gradle'
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: 'stable'
+        channel: 'stable'
         cache: true
     - run: flutter pub get
     - name: Run iOS
@@ -38,7 +38,7 @@ jobs:
         cache: 'gradle'
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: 'stable'
+        channel: 'stable'
         cache: true
     - run: flutter pub get
     - run: flutter build apk --debug --target lib/main.dart --no-sound-null-safety
@@ -54,6 +54,7 @@ jobs:
         java-version: '11'
         cache: 'gradle'
       with:
-        flutter-version: 'stable'
+        channel: 'stable'
+        cache: true
     - run: flutter pub get
     - run: flutter test 
