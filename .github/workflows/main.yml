@@ -25,6 +25,7 @@ jobs:
         cache: true
     - run: flutter pub get
     - name: Import Provisioning Profile
+      run: |
         mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
         echo -n ${{ secrets.PROVISIONING_PROFILE }} | base64 -d > ~/Library/MobileDevice/Provisioning\ Profiles/distribution.mobileprovision
     - name: Import Code-Signing Certificates
