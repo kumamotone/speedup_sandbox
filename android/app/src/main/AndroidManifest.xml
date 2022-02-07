@@ -2,7 +2,7 @@
     package="com.example.speedup_sandbox">
    <application
         android:label="speedup_sandbox"
-        android:name="io.flutter.app.FlutterApplication"
+        android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
