@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:speedup_sandbox/routing.dart';
 import 'package:speedup_sandbox/theming.dart';
+import 'package:speedup_sandbox/ui/root_page.dart';
 
 void main() {
   runApp(
@@ -12,14 +12,15 @@ void main() {
 }
 
 class Main extends StatelessWidget {
-  const Main({Key? key}) : super(key: key);
+  const Main({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return MaterialApp(
       theme: theme,
-      routeInformationParser: router.routeInformationParser,
-      routerDelegate: router.routerDelegate,
+      home: const Scaffold(
+        body: RootPage(),
+      ),
     );
   }
 }

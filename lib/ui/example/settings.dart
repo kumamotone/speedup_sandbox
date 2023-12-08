@@ -11,28 +11,26 @@ enum PageType {
 }
 
 class SettingsTabPage extends HookConsumerWidget {
-  const SettingsTabPage({Key? key}) : super(key: key);
+  const SettingsTabPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Padding(
-                    padding: EdgeInsets.all(12.0),
-                    child: Text('Settings Page', style: boldTextStyle),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(0, 0, 16.0, 0),
-                    child: Text('Button', style: boldTextStyle),
-                  ),
-                ]),
-            const Divider(height: 1),
-            const Text('Settings Page'),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Text('Settings Page', style: boldTextStyle),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 16.0, 0),
+                child: Text('Button', style: boldTextStyle),
+              ),
+            ]),
+            Divider(height: 1),
+            Text('Settings Page'),
           ],
         ),
       ),

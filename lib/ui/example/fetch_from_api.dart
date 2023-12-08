@@ -7,16 +7,16 @@ import '../../entities/example/currency_entity.dart';
 import '../../repositories/example/currency_repository.dart';
 
 class CurrencyListTabPage extends HookConsumerWidget {
-  const CurrencyListTabPage({Key? key}) : super(key: key);
+  const CurrencyListTabPage({super.key});
 
   Widget header() {
-    return Stack(
+    return const Stack(
       alignment: AlignmentDirectional.center,
       children: [
-        const Center(
+        Center(
           child: Text('Currency List', style: boldTextStyle),
         ),
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Padding(
             padding: EdgeInsets.all(12.0),
             child: Icon(
