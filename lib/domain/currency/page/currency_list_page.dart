@@ -13,7 +13,7 @@ class CurrencyListPage extends HookConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Currency List"),
+        title: const Text("通貨リスト (Example)"),
       ),
       body: currencyList.when(
         data: (data) {

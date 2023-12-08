@@ -8,7 +8,7 @@ class GenericLoadingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text("error"),
+      child: Text("loading..."),
     );
   }
 }
