@@ -27,7 +27,7 @@ class CupertinoStyleTabPage extends HookConsumerWidget {
             return CupertinoTabView(
               builder: (context) {
                 return const CupertinoPageScaffold(
-                  child: CurrencyListTabPage(),
+                  child: CurrencyListPage(),
                 );
               },
             );
