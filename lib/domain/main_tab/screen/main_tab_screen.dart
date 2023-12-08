@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:speedup_sandbox/domain/first/page/main_page.dart';
+import 'package:speedup_sandbox/domain/home/page/home_page.dart';
 import 'package:speedup_sandbox/domain/settings/page/settings_page.dart';
 
-class FirstScreen extends StatelessWidget {
-  const FirstScreen({super.key});
+class MainTabScreen extends StatelessWidget {
+  const MainTabScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return const DefaultTabController(
