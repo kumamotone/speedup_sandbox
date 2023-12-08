@@ -1,17 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:speedup_sandbox/theme.dart';
 
-import '/theming.dart';
-
-final pageTypeProvider = StateProvider<PageType>((ref) => PageType.first);
-
-enum PageType {
-  first,
-  second,
-}
-
-class SettingsTabPage extends HookConsumerWidget {
-  const SettingsTabPage({super.key});
+class SettingsPage extends HookConsumerWidget {
+  const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

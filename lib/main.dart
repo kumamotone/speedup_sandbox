@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:speedup_sandbox/theming.dart';
-import 'package:speedup_sandbox/ui/root_page.dart';
+import 'package:speedup_sandbox/theme.dart';
+import 'package:speedup_sandbox/domain/first/screen/first_screen.dart';
 
 void main() {
   runApp(
@@ -19,7 +19,7 @@ class Main extends StatelessWidget {
     return MaterialApp(
       theme: theme,
       home: const Scaffold(
-        body: RootPage(),
+        body: FirstScreen(),
       ),
     );
   }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:speedup_sandbox/providers.dart';
-import 'package:speedup_sandbox/ui/generic/generic_error_view.dart';
-import 'package:speedup_sandbox/ui/generic/generic_loading_view.dart';
+import 'package:speedup_sandbox/widgets/error/generic_error_view.dart';
+import 'package:speedup_sandbox/widgets/loading/generic_loading_view.dart';
 
 class CurrencyListPage extends HookConsumerWidget {
   const CurrencyListPage({super.key});

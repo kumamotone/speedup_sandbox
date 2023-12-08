@@ -1,16 +1,16 @@
-class CurrencyEntity {
+class Currency {
   String id;
   String name;
   String minSize;
 
-  CurrencyEntity({
+  Currency({
     required this.id,
     required this.name,
     required this.minSize,
   });
 
-  factory CurrencyEntity.fromJson(dynamic json) {
-    return CurrencyEntity(
+  factory Currency.fromJson(dynamic json) {
+    return Currency(
         id: json['id'], name: json['name'], minSize: json['min_size']);
   }
 
